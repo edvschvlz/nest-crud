@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  db:
+    container_name: postgres_crud
+    image: postgres:15.2
+    ports:
+      - 5432:5432
+    networks:
+      - app
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=crud
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - /data/postgres:/data/postgres
+  api:
+    container_name: crud_api
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=crud
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=root
+    ports:
+      - 3000:3000
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
