@@ -39,13 +39,19 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}/users/DFD1FB1C-0AEA-ED11-84CB-9C2F9D50D10C",
+					"raw": "{{HOST}}/users/:id",
 					"host": [
 						"{{HOST}}"
 					],
 					"path": [
 						"users",
-						"DFD1FB1C-0AEA-ED11-84CB-9C2F9D50D10C"
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
 					]
 				}
 			},
@@ -66,13 +72,19 @@
 					}
 				},
 				"url": {
-					"raw": "{{HOST}}/users/DFD1FB1C-0AEA-ED11-84CB-9C2F9D50D10C",
+					"raw": "{{HOST}}/users/:id",
 					"host": [
 						"{{HOST}}"
 					],
 					"path": [
 						"users",
-						"DFD1FB1C-0AEA-ED11-84CB-9C2F9D50D10C"
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
 					]
 				}
 			},
@@ -84,13 +96,19 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}/users/DFD1FB1C-0AEA-ED11-84CB-9C2F9D50D10C",
+					"raw": "{{HOST}}/users/:id",
 					"host": [
 						"{{HOST}}"
 					],
 					"path": [
 						"users",
-						"DFD1FB1C-0AEA-ED11-84CB-9C2F9D50D10C"
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
 					]
 				}
 			},
